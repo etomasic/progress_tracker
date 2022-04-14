@@ -1,4 +1,5 @@
 from classes import User, Topic
+import json
 
 
 def create_users():
@@ -15,3 +16,8 @@ def create_topics():
         for line in f:
             topics.append(Topic(*line.split(",")))
     return topics
+
+
+def create_lists():
+    f = open("lists.json")
+    return json.load(f)

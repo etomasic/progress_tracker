@@ -14,8 +14,8 @@ class User:
 class State(Enum):
 
     not_started = -1
-    in_progress = 0
-    complete = 1
+    in_progress = 1
+    complete = 0
 
 
 class Media(Enum):
@@ -27,7 +27,7 @@ class Media(Enum):
 
 class Topic:
 
-    def __init__(self, name, media, state=State.not_started):
+    def __init__(self, name, media, num_subdivisions):
         self.name = name
         self.media = Media(int(media))
-        self.state = state
+        self.num_subdivisions = int(num_subdivisions)
