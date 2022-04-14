@@ -277,6 +277,8 @@ while True:
             break
         case "2":
             username = create_account()
+            users = populate_data.create_users()
+            names = [x.username for x in users]
             break
 
 while True:
