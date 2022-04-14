@@ -250,7 +250,7 @@ def check_topic():
     num_in_progress = 0
     num_complete = 0
     for user in names:
-        status = list[user].get(media[index].name, -1)
+        status = list[user]["progress"].get(media[index].name, -1)
         if status == -1:
             num_not_started += 1
         elif status == 0:
